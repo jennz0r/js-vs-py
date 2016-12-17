@@ -52,7 +52,7 @@
 					</section>
 					<section>
 						<h2>JavaScript</h2>
-						<p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+						<p>JavaScript is a high-level, dynamic, untyped, and interpreted programming language.</p>
 					</section>
 					<section>
 						<table>
@@ -81,9 +81,18 @@
 								<td>Boo, Cobra, CoffeeScript, D, F#, Falcon, Genie, Go, Groovy, JavaScript, Julia, Nim, Ruby, Swift</td>
 								<td>ActionScript, AtScript, CoffeeScript, Dart, JScript .NET, LiveScript, Objective-J, Opa, Perl 6, QML, TypeScript</td>
 							</tr>
-						</table>						
+						</table>
+					</section>
+					<section>
 					</section>
 				</section>
+
+				<section>
+					<section>
+						<h1>What? and Ohhh! Moments</h1>
+					</section>
+				</section>
+
 				<section>
 					<section>
 						<h2>Comments</h2>
@@ -106,6 +115,7 @@ Comments
 '''
 						</pre></code>
 					</section>
+
 					<section>
 						<h2>Primitive</h2>
 						<pre><code>
@@ -116,6 +126,7 @@ Comments
     Undefined, which indicates a lack of value OR definition
     Number
     String
+    Symbol
 
     Array
     Object
@@ -143,6 +154,7 @@ array = []
 dictionary = {}
 						</code></pre>
 					</section>
+
 					<section>
 						<h2>Comments</h2>
 						<pre><code>
@@ -164,6 +176,7 @@ Comments
 '''
 						</code></pre>
 					</section>
+
 					<section>
 						<h2>What's a Tuple?</h2>
 						<pre><code>
@@ -171,6 +184,170 @@ Comments
 tuple = ()
 						</code></pre>
 					</section>
+
+					<section>
+						<h2>Concatenation</h2>
+					</section>
+
+
+					<section>
+						<h2>Type Coersion</h2>
+						<pre><code>
+// You can coerce an integer into string in JavaScript
+var coerced = 1;
+var concatenated = coerced + 'string';
+						</code></pre>
+						<pre><code>
+# You can't coerce an integer into a string in Python
+not_coerced = 1
+concatenated = str(not_coerced) + 'string'
+						</code></pre>
+					</section>
+					<section data-background="img/confused.gif">
+						<aside class="notes">
+							Slide where Sherlock is simultaneously confused and sad.
+						</aside>
+					</section>
+
+					<section>
+						<h2>Functions & Conditionals</h2>
+						<pre><code>
+function drSeuss(catInTheHat, thing1, thing2) {
+    if (catInTheHat == true &&
+        thing1 == true &&
+        thing2 == true) {
+        console.log('shit is crazy');
+    } else if (catInTheHat != true) {
+        console.log('things are boring');
+    } else {
+        console.log('things are so boring');
+    }
+}
+						</code></pre>
+						<pre><code>
+def dr_seuss(cat_in_the_hat, thing1, thing2):
+    if  cat_in_the_hat == true and
+        thing2 == true and
+        thing2 == true:
+        print 'shit is crazy'
+    elif cat_in_the_hat != true:
+        print 'things are boring'
+    else:
+        print 'things are so boring'
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Functions vs. Methods</h2>
+						<p>Python taught me there's a difference!</p>
+					</section>
+
+					<section>
+						<h2>Ternary</h2>
+						<pre><code>
+let doILikeChildren = wellBehaved ? 'yes' : 'hell no'
+						</code></pre>
+						<pre><code>
+do_i_like_children = 'yes' if well_behaved else 'hell no'
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Ternary</h2>
+						<pre><code>
+var Mammal = function() {};
+Mammal.prototype.neoCortex = true;
+
+var Cat = function(name, years) {
+  this.name = name;
+  this.years = years;
+};
+
+Cat.prototype = new Mammal;
+
+var fryCat = new Cat('Fry', 7);
+
+fryCat.prototype.eat = function(food) {
+    console.log('nom nom nom ' + food);
+}
+
+fryCat.eat('steak');
+
+						</code></pre>
+						<pre><code>
+class Mammal(object):
+    neo_cortex = True
+
+class Cat(Mammal):
+    def __init__(self, name, years):
+      self.name = name
+      self.years = years
+
+    def eat(food):
+        print 'nom nom nom %s' % (food)
+
+fry_cat = Cat('Fry', 7)
+
+fry_cat.eat('steak')
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Ternary</h2>
+						<pre><code>
+// This version in ES6.
+						</code></pre>
+						<pre><code>
+class Mammal(object):
+    neo_cortex = True
+
+class Cat(Mammal):
+    def __init__(self, name, years):
+      self.name = name
+      self.years = years
+
+    def eat(food):
+        print 'nom nom nom %s' % (food)
+
+fry_cat = Cat('Fry', 7)
+
+fry_cat.eat('steak')
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Scope</h2>
+						<p>// JavaScript uses Lexical Scope
+// JavaScript only creates scope (namespace) with function definitions
+// New identifiers affected by scope are variables and functions.
+// New JavaScript files do not get their own scope!</p>
+						<p># Python uses Lexical Scope
+# Python creates scope (namespace) using functions, classes, and modules.
+# New identifiers affected by scope are variables, functions, and classes.
+# All new Python files are Modules, thus receiving their own scope.</p>
+					</section>
+
+					<section>
+						<h2>Hoisting</h2>
+						<pre><code>
+var boba = 'passion green tea';
+console.log(boba);
+
+function jennsOrder() {
+    console.log(boba);
+    var boba = 'mango green milk tea';
+    console.log(boba);
+}
+
+jennsOrder();
+						</code></pre>
+						<pre><code>
+def jenns_order:
+    print boba
+    boba = 'mango green milk tea'
+						</code></pre>
+					</section>
+
 				</section>
 			</div>
 		</div>
