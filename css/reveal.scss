@@ -238,8 +238,8 @@ body {
 .reveal .controls {
 	display: none;
 	position: fixed;
-	width: 110px;
-	height: 110px;
+	width: 90px;
+	height: 90px;
 	z-index: 30;
 	right: 10px;
 	bottom: 10px;
@@ -271,9 +271,10 @@ body {
 }
 
 	.reveal .controls .navigate-left {
-		top: 42px;
+		top: 50px;
+		left: 27px;
 
-		border-right-width: 22px;
+		border-right-width: 12px;
 		border-right-color: #000;
 	}
 		.reveal .controls .navigate-left.fragmented {
@@ -281,10 +282,10 @@ body {
 		}
 
 	.reveal .controls .navigate-right {
-		left: 74px;
-		top: 42px;
+		left: 73px;
+		top: 50px;
 
-		border-left-width: 22px;
+		border-left-width: 12px;
 		border-left-color: #000;
 	}
 		.reveal .controls .navigate-right.fragmented {
@@ -292,9 +293,10 @@ body {
 		}
 
 	.reveal .controls .navigate-up {
-		left: 42px;
+		left: 50px;
+		top: 27px;
 
-		border-bottom-width: 22px;
+		border-bottom-width: 12px;
 		border-bottom-color: #000;
 	}
 		.reveal .controls .navigate-up.fragmented {
@@ -302,10 +304,10 @@ body {
 		}
 
 	.reveal .controls .navigate-down {
-		left: 42px;
-		top: 74px;
+		left: 50px;
+		top: 73px;
 
-		border-top-width: 22px;
+		border-top-width: 12px;
 		border-top-color: #000;
 	}
 		.reveal .controls .navigate-down.fragmented {

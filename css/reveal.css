@@ -192,8 +192,8 @@ body {
 .reveal .controls {
   display: none;
   position: fixed;
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
   z-index: 30;
   right: 10px;
   bottom: 10px;
@@ -222,34 +222,36 @@ body {
   margin-top: 1px; }
 
 .reveal .controls .navigate-left {
-  top: 42px;
-  border-right-width: 22px;
+  top: 50px;
+  left: 27px;
+  border-right-width: 12px;
   border-right-color: #000; }
 
 .reveal .controls .navigate-left.fragmented {
   opacity: 0.3; }
 
 .reveal .controls .navigate-right {
-  left: 74px;
-  top: 42px;
-  border-left-width: 22px;
+  left: 73px;
+  top: 50px;
+  border-left-width: 12px;
   border-left-color: #000; }
 
 .reveal .controls .navigate-right.fragmented {
   opacity: 0.3; }
 
 .reveal .controls .navigate-up {
-  left: 42px;
-  border-bottom-width: 22px;
+  left: 50px;
+  top: 27px;
+  border-bottom-width: 12px;
   border-bottom-color: #000; }
 
 .reveal .controls .navigate-up.fragmented {
   opacity: 0.3; }
 
 .reveal .controls .navigate-down {
-  left: 42px;
-  top: 74px;
-  border-top-width: 22px;
+  left: 50px;
+  top: 73px;
+  border-top-width: 12px;
   border-top-color: #000; }
 
 .reveal .controls .navigate-down.fragmented {
@@ -1143,7 +1145,6 @@ body {
 .reveal .overlay .viewport {
   position: absolute;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   top: 40px;

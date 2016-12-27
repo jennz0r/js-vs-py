@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="css/theme/jenn.css">
 
 		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="lib/css/dracula.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -27,15 +27,70 @@
 				<section>
 					<section>
 						<h1>The Afterlife: Languages after JavaScript</h1>
-					</section>
-					<section>
-						<h2>Jennifer Wong</h2>
+						<br/>
+						<small><a href="https://github.com/jennz0r" target="_blank">jennz0r</a> / <a href="https://twitter.com/mybluewristband" target="_blank">@mybluewristband</a></small>
 					</section>
 					<section data-background="img/headshot.jpg"></section>
 					<section data-background="img/eventbrite_cake.jpg">
-						<h2>Eventbrite</h2>
+						<h1>Eventbrite</h1>
 					</section>
 				</section>
+
+				<section>
+					<section>
+						<h2>2013</h2>
+					</section>
+					<section data-background="img/oculus.jpg">
+						<aside class="notes">
+							The first Oculus Rift Development Kit is released.
+						</aside>
+					</section>
+					<section data-background="img/amazon.jpg">
+						<aside class="notes">
+							Jeff Bezos announces Prime Air, the drone-based delivery system.
+						</aside>
+					</section>
+					<section data-background="img/glass.jpg">
+						<aside class="notes">
+							Google Glass is released.
+						</aside>
+					</section>
+					<section>
+						<h2>Jenn learns JavaScript.</h2>
+					</section>
+					<section>
+						<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Good news, me! <a href="https://twitter.com/hashtag/javascript?src=hash">#javascript</a> <a href="https://twitter.com/hashtag/programming?src=hash">#programming</a> <a href="https://twitter.com/hashtag/developer?src=hash">#developer</a> <a href="http://t.co/9Cx01Nyj">http://t.co/9Cx01Nyj</a></p>&mdash; jennz0r (@mybluewristband) <a href="https://twitter.com/mybluewristband/status/298313676530806784">February 4, 2013</a></blockquote>
+						<img src="img/rankings.png">
+					</section>
+					<section>
+						<h2>And uses it.</h2>
+					</section>
+					<section>
+						<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Yay! My first <a href="https://twitter.com/hashtag/javascript?src=hash">#javascript</a>: <a href="http://t.co/eSifLvgp">http://t.co/eSifLvgp</a></p>&mdash; jennz0r (@mybluewristband) <a href="https://twitter.com/mybluewristband/status/301823085781319683">February 13, 2013</a></blockquote>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>2016</h2>
+					</section>
+					<section>
+						<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Concurrently writing JavaScript and Python files to demonstrate to my coworkers their differences... and weirdnesses.</p>&mdash; jennz0r (@mybluewristband) <a href="https://twitter.com/mybluewristband/status/753474225579536384">July 14, 2016</a></blockquote>
+					</section>
+					<section>
+						<a href="http://stateofjs.com/">The State of JavaScript</a>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>What? and Ohhh! Moments</h1>
+					</section>
+					<section>
+						<h2>Blah</h2>
+					</section>
+				</section>
+
 				<section>
 					<section>
 						<h1>A Quick History</h1>
@@ -83,121 +138,132 @@
 							</tr>
 						</table>
 					</section>
-					<section>
-					</section>
-				</section>
-
-				<section>
-					<section>
-						<h1>What? and Ohhh! Moments</h1>
-					</section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Comments</h2>
-						<pre><code>
-// Inline Comments
+						<div style="display:inline-block;width: 49%;">
+							<pre><code data-trim data-noescape class="javascript">
+// Inline Comment
 
 /*
 Multiple
 Line
-Comments
+Comment
 */
-						</code></pre>
-						<pre><code>
-# Inline Comments
+							</code></pre>
+						</div>
+						<div style="display:inline-block;width: 49%;">
+							<pre><code data-trim data-noescape class="python">
+# Inline Comment
 
-''' 
+'''
 Multiple
 Line
-Comments
+Comment
 '''
-						</pre></code>
+							</pre></code>
+						</div>
 					</section>
 
 					<section>
-						<h2>Primitive</h2>
-						<pre><code>
-/*  
-    Primatives:
-    Boolean: true and false
-    Null, which is an actual value
-    Undefined, which indicates a lack of value OR definition
-    Number
-    String
-    Symbol
+						<h2>Whitespace</h2>
+						<p>It doesn't matter!</p>
+					</section>
 
-    Array
-    Object
+					<section>
+						<h2>Whitespace</h2>
+						<p>It does matter!</p>
+					</section>
+
+					<section>
+						<h2>Primitives</h2>
+						<table>
+							<tr>
+								<th></th>
+								<th><h6>JavaScript</h6></th>
+								<th><h6>Python</h6></th>
+							</tr>
+							<tr>
+								<td><h6>Scope</h6></td>
+								<td>Lexical</td>
+								<td>Lexical</td>
+							</tr>
+							<tr>
+								<td><h6>Namespace</h6></td>
+								<td>Functions, Classes, Modules</td>
+								<td>Functions</td>
+							</tr>
+							<tr>
+								<td><h6>New Identifiers</h6></td>
+								<td>Variables, Functions, Classes</td>
+								<td>Variables, Functions</td>
+							</tr>
+							<tr>
+								<td><h6>Modules</h6></td>
+								<td>Files</td>
+								<td>None</td>
+							</tr>
+						</table>
+						<div style="display:inline-block;width: 49%;">
+							<pre><code data-trim data-noescape class="javascript">
+/*  Primitives:
+  Boolean
+  Null
+  Undefined
+  Number
+  String
+  Array
+  Object 
 */
 
-    var integer = 1;
-    var array = [];
-    var object = {};
-						</code></pre>
-						<pre><code>
-''' 
-    Primatives:
-    Boolean - True and False
-    None
-    There is no equivalent Undefined - you can't define something without a value
-    Int, Long, Float, Complex
-    String, Unicode
-
-    List, Tuple, Bytearray, Buffer, Xrange
-    Dictionary
+var integer = 1;
+var array = [];
+var object = {};
+							</code></pre>
+						</div>
+						<div style="display:inline-block;width: 49%;">
+							<pre><code data-trim data-noescape class="python">
+'''Primitives:
+  Boolean
+  None
+  XXXXX
+  Int, Long, Float, Complex
+  String, Unicode
+  List, Tuple, Bytearray, Buffer..
+  Dictionary
 '''
 
 integer = 1
 array = []
 dictionary = {}
-						</code></pre>
-					</section>
-
-					<section>
-						<h2>Comments</h2>
-						<pre><code>
-// Inline Comments
-
-/*
-Multiple
-Line
-Comments
-*/
-						</code></pre>
-						<pre><code>
-# Inline Comments
-
-''' 
-Multiple
-Line
-Comments
-'''
-						</code></pre>
+							</code></pre>
+						</div>
 					</section>
 
 					<section>
 						<h2>What's a Tuple?</h2>
-						<pre><code>
+						<pre><code data-trim data-noescape class="python">
 # These only exist in Python, not in JavaScript
 tuple = ()
 						</code></pre>
 					</section>
 
+				</section>
+
+				<section>
 					<section>
 						<h2>Concatenation</h2>
 					</section>
-
-
 					<section>
 						<h2>Type Coersion</h2>
-						<pre><code>
+						<pre><code data-trim data-noescape class="javascript">
 // You can coerce an integer into string in JavaScript
 var coerced = 1;
 var concatenated = coerced + 'string';
 						</code></pre>
-						<pre><code>
+						<pre><code data-trim data-noescape>
 # You can't coerce an integer into a string in Python
 not_coerced = 1
 concatenated = str(not_coerced) + 'string'
@@ -208,33 +274,38 @@ concatenated = str(not_coerced) + 'string'
 							Slide where Sherlock is simultaneously confused and sad.
 						</aside>
 					</section>
+				</section>
 
 					<section>
 						<h2>Functions & Conditionals</h2>
-						<pre><code>
+						<div style="display:inline-block;width: 49%;">
+							<pre><code data-trim data-noescape class="javascript"  class="python">
 function drSeuss(catInTheHat, thing1, thing2) {
-    if (catInTheHat == true &&
-        thing1 == true &&
-        thing2 == true) {
-        console.log('shit is crazy');
-    } else if (catInTheHat != true) {
-        console.log('things are boring');
-    } else {
-        console.log('things are so boring');
-    }
+  if (catInTheHat == true &&
+    thing1 == true &&
+    thing2 == true) {
+    console.log('is cray');
+  } else if (catInTheHat != true) {
+    console.log('boring');
+  } else {
+    console.log('so boring');
+  }
 }
-						</code></pre>
-						<pre><code>
+							</code></pre>
+						</div>
+						<div style="display:inline-block;width: 49%;" class="python">
+							<pre><code data-trim data-noescape>
 def dr_seuss(cat_in_the_hat, thing1, thing2):
-    if  cat_in_the_hat == true and
-        thing2 == true and
-        thing2 == true:
-        print 'shit is crazy'
-    elif cat_in_the_hat != true:
-        print 'things are boring'
-    else:
-        print 'things are so boring'
-						</code></pre>
+  if cat_in_the_hat == true and
+    thing2 == true and
+    thing2 == true:
+    print 'is cray'
+  elif cat_in_the_hat != true:
+    print 'boring'
+  else:
+    print 'so boring'
+							</code></pre>
+						</div>
 					</section>
 
 					<section>
@@ -244,17 +315,37 @@ def dr_seuss(cat_in_the_hat, thing1, thing2):
 
 					<section>
 						<h2>Ternary</h2>
-						<pre><code>
-let doILikeChildren = wellBehaved ? 'yes' : 'hell no'
+						<pre><code data-trim data-noescape class="kavascript">
+var doILikeChildren = wellBehaved ? 'yes' : 'no'
 						</code></pre>
-						<pre><code>
-do_i_like_children = 'yes' if well_behaved else 'hell no'
+						<pre><code data-trim data-noescape class="python">
+do_i_like_children = 'yes' if well_behaved else 'no'
 						</code></pre>
 					</section>
 
 					<section>
-						<h2>Ternary</h2>
-						<pre><code>
+						<section>
+							<h2>Prototype</h2>
+						</section>
+						<section data-background="img/prototype-jewelry.jpg">
+							<aside class="notes">
+							Slide showing prototypes of a ring.
+							</aside>
+						</section>
+						<section data-background="img/prototype.jpg">
+							<aside class="notes">
+							Slide showing a screenshot of the video game Prototype.
+							</aside>
+						</section>
+						<section data-background="img/prototypes.jpg">
+							<aside class="notes">
+							Slide showing a screenshot of the French indie band Prototypes.
+							</aside>
+						</section>
+						<section>
+							<h2>Prototypes vs. Classes</h2>
+							<div style="display:inline-block;width: 49%;">
+								<pre><code data-trim data-noescape class="javascript">
 var Mammal = function() {};
 Mammal.prototype.neoCortex = true;
 
@@ -268,92 +359,138 @@ Cat.prototype = new Mammal;
 var fryCat = new Cat('Fry', 7);
 
 fryCat.prototype.eat = function(food) {
-    console.log('nom nom nom ' + food);
+  console.log('nom ' + food);
 }
-
 fryCat.eat('steak');
-
-						</code></pre>
-						<pre><code>
-class Mammal(object):
-    neo_cortex = True
+								</code></pre>
+							</div>
+							<div style="display:inline-block;width: 49%;" class="python">
+								<pre><code data-noescape>class Mammal(object):
+neo_cortex = True
 
 class Cat(Mammal):
-    def __init__(self, name, years):
-      self.name = name
-      self.years = years
+  def __init__(self, name, years):
+    self.name = name
+    self.years = years
 
-    def eat(food):
-        print 'nom nom nom %s' % (food)
+def eat(food):
+  print 'nom %s' % (food)
 
 fry_cat = Cat('Fry', 7)
 
 fry_cat.eat('steak')
-						</code></pre>
+
+
+								</code></pre>
+							</div>
+						</section>
 					</section>
 
 					<section>
-						<h2>Ternary</h2>
-						<pre><code>
-// This version in ES6.
-						</code></pre>
-						<pre><code>
-class Mammal(object):
-    neo_cortex = True
-
-class Cat(Mammal):
-    def __init__(self, name, years):
-      self.name = name
-      self.years = years
-
-    def eat(food):
-        print 'nom nom nom %s' % (food)
-
-fry_cat = Cat('Fry', 7)
-
-fry_cat.eat('steak')
-						</code></pre>
+						<section>
+							<h2>Scope</h2>
+						</section>
+						<section>
+							<table>
+								<tr>
+									<th></th>
+									<th><h6>Python</h6></th>
+									<th><h6>JavaScript</h6></th>
+								</tr>
+								<tr>
+									<td><h6>Scope</h6></td>
+									<td>Lexical</td>
+									<td>Lexical</td>
+								</tr>
+								<tr>
+									<td><h6>Namespace</h6></td>
+									<td>Functions, Classes, Modules</td>
+									<td>Functions</td>
+								</tr>
+								<tr>
+									<td><h6>New Identifiers</h6></td>
+									<td>Variables, Functions, Classes</td>
+									<td>Variables, Functions</td>
+								</tr>
+								<tr>
+									<td><h6>Modules</h6></td>
+									<td>Files</td>
+									<td>None</td>
+								</tr>
+							</table>
+						</section>
 					</section>
 
 					<section>
-						<h2>Scope</h2>
-						<p>// JavaScript uses Lexical Scope
-// JavaScript only creates scope (namespace) with function definitions
-// New identifiers affected by scope are variables and functions.
-// New JavaScript files do not get their own scope!</p>
-						<p># Python uses Lexical Scope
-# Python creates scope (namespace) using functions, classes, and modules.
-# New identifiers affected by scope are variables, functions, and classes.
-# All new Python files are Modules, thus receiving their own scope.</p>
+						<h2>This vs. Self</h2>
+
 					</section>
 
 					<section>
 						<h2>Hoisting</h2>
-						<pre><code>
+						<div style="display:inline-block;width: 49%;">
+							<pre><code data-trim data-noescape class="javascript">
 var boba = 'passion green tea';
 console.log(boba);
 
 function jennsOrder() {
-    console.log(boba);
-    var boba = 'mango green milk tea';
-    console.log(boba);
+  console.log(boba);
+  var boba = 'mango green milk tea';
+  console.log(boba);
 }
 
 jennsOrder();
-						</code></pre>
-						<pre><code>
+							</code></pre>
+						</div>
+						<div style="display:inline-block;width: 49%;">	
+							<pre><code data-trim data-noescape class="python">
 def jenns_order:
-    print boba
-    boba = 'mango green milk tea'
-						</code></pre>
+  print boba
+  boba = 'mango green milk tea'
+							</code></pre>
+						</div>
+						<br/>
+						<br/>
+						<small>*Boba is also known as bubble tea, pearl milk tea, boba milk tea, and boba juice.</small>
 					</section>
 
+				<section>
+					<h1>ES6!</h1>
 				</section>
+				<section>
+					<h2>Template Literals</h2>
+					<p>New ES6 syntactic sugar classes</p>
+					<p>Python Classes</p>
+				</section>
+
+				<section>
+					<h2>Spread Operators... vs. Kwargs</h2>
+				</section>
+
+				<section>
+					<h2>Rest/Default Parameters vs. XXX</h2>
+					<p>Setting default parameters in the function definition.</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Classes</h2>
+						<p>New ES6 syntactic sugar classes</p>
+						<p>Python Classes</p>
+					</section>
+					<section data-background="img/prototype2.jpg">
+						<aside class="notes">
+							Slide of screenshot from video game Prototype 2.
+						</aside>
+					</section>
+				</section>
+
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration

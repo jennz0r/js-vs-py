@@ -5,8 +5,9 @@
 
 
 // Include theme-specific fonts
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url('../../lib/font/source-sans-pro/source-sans-pro.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Trocchi|Arima+Madurai:900');
+
 
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #84d8c9;
@@ -20,9 +21,9 @@ $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Montserrat', Impact, Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: capitalize;
+$headingTextTransform: none;
 $headingFontWeight: 600;
-$linkColor: #2a76dd;
+$linkColor: #2c1d96;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
@@ -41,6 +42,17 @@ section.has-dark-background {
 @import "../template/theme";
 // ---------------------------------------------
 
+.reveal {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Arima Madurai', serif;
+        font-weight: black;
+    }
+}
+
+.reveal h2 {
+    font-size: 2em;
+}
+
 .reveal section img.img--no-format {
     border: none;
     box-shadow: none;
@@ -49,4 +61,12 @@ section.has-dark-background {
 
 .reveal section table {
     font-size: $mainFontSizeMedium;
+}
+
+.reveal pre {
+    width: 100%;
+}
+
+.twitter-tweet {
+    margin: 0 auto !important;
 }
