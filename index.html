@@ -129,6 +129,10 @@
 					<section data-background="img/trump.jpg">
 						<aside class="notes">I'm one to talk... Image of Donald Trump making a silly face</aside>
 					</section>
+					<section>
+						<img src="img/ignore_fire.gif">
+						<aside class="notes">Speaking of trash fires... JavaScript has gone a little mad recently. Gif of The IT Crowd guy ignoring a fire.</aside>
+					</section>
 					<section data-background="img/state_of_js.png">
 						<a href="http://stateofjs.com/"></a>
 					</section>
@@ -143,7 +147,7 @@
 
 				<section>
 					<section>
-						<h1>THINK BACK</h1>
+						<h1>Think back...</h1>
 						<aside class="notes">Think back to the time you learned your second programming language. CLICK . OR B</aside>
 					</section>
 					<section>
@@ -454,11 +458,13 @@ def dr_seuss(cat_in_the_hat, thing1, thing2):
 
 					<section>
 						<h2>Functions & Methods in JavaScript</h2>
-						<p>The global Function object has no methods or properties of its own, however, since it is a function itself it does inherit some methods and properties through the prototype chain from Function.prototype.</p>
+						<p>The global Function object has no methods or properties of its own. However, it does inherit some methods and properties through the prototype chain from Function.prototype.</p>
 					</section>
 
 					<section>
-						<h2>Declared vs. Built In</h2>
+						<h2>Declared <span class="fragment">Functions</span></h2>
+						<p>vs.</p>
+						<h2>Built In <span class="fragment">Methods</span></h2>
 					</section>
 
 					<section>
@@ -467,8 +473,11 @@ def dr_seuss(cat_in_the_hat, thing1, thing2):
 
 						<ol>
 							<li>A method is implicitly passed the object on which it was called.</li>
-							<li>A method is able to operate on data that is contained within the class (remembering that an object is an instance of a class - the class is the definition, the object is an instance of that data).</li>
+							<li>A method is able to operate on data that is contained within the  <span class="fragment highlight-blue">class</span>.</li>
 						</ol>
+					</section>
+					<section data-background-image="img/doctor_who.gif">
+						<aside class="notes">Gif of Doctor Who (13th) doing a face palm.</aside>
 					</section>
 				</section>
 
@@ -484,6 +493,10 @@ do_i_like_children = 'yes' if well_behaved else 'no'
 						</code></pre>
 						<aside class="notes">One groups the outcomes while the other reads like a sentence.</aside>
 					</section>
+				</section>
+
+				<section>
+					<h1>A little bigger now.</h1>
 				</section>
 
 				<section>
@@ -507,7 +520,7 @@ do_i_like_children = 'yes' if well_behaved else 'no'
 						<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Is there a band called &quot;Inheritance and the Prototype Chain&quot; yet?</p>&mdash; jennz0r (@mybluewristband) <a href="https://twitter.com/mybluewristband/status/816105329159045120">January 3, 2017</a></blockquote>
 					</section>
 					<section>
-						<h2>Prototypes v. Classes</h2>
+						<h2>Prototypes vs. Classes</h2>
 						<div style="display:inline-block;width: 49%;">
 							<pre><code data-trim data-noescape class="javascript">
 var Mammal = function() {};
@@ -552,7 +565,7 @@ fry_cat.eat('steak')
 						</div>
 					</section>
 					<section>
-						<h2>Prototypes v. Classes</h2>
+						<h2>Prototypes vs. Classes</h2>
 						<div style="display:inline-block;width: 49%;">
 							<pre><code data-trim data-noescape class="javascript">
 var Mammal = function() {};
@@ -566,8 +579,8 @@ class Mammal(object):
 							</code></pre>
 						</div>
 					</section>
-										<section>
-						<h2>Prototypes v. Classes</h2>
+					<section>
+						<h2>Prototypes vs. Classes</h2>
 						<div style="display:inline-block;width: 49%;">
 							<pre><code data-trim data-noescape class="javascript">
 var Cat = function(name, years) {
@@ -600,7 +613,7 @@ fry_cat = Cat('Fry', 7)
 						</div>
 					</section>
 										<section>
-						<h2>Prototypes vs Classes</h2>
+						<h2>Prototypes vs. Classes</h2>
 						<div style="display:inline-block;width: 49%;">
 							<pre><code data-trim data-noescape class="javascript">
 fryCat.eat('steak');
@@ -611,6 +624,9 @@ fryCat.eat('steak');
 fry_cat.eat('steak')
 							</code></pre>
 						</div>
+					</section>
+					<section data-background-image="img/cat-eats-steak.jpg">
+						<aside class="notes">Image of cat eating a steak.</aside>
 					</section>
 				</section>
 
@@ -651,7 +667,7 @@ fry_cat.eat('steak')
 
 				<section>
 					<section>
-						<h2>This v. Self</h2>
+						<h2>This vs. Self</h2>
 					</section>
 					<section data-background="img/doctor_who_this.gif">
 					</section>
@@ -702,7 +718,7 @@ foo(); // true true true
 						<p>So <em>this</em> could be <em>self</em> if you're in the global scope</p>
 					</section>
 					<section>
-						<h2>This v. Self</h2>
+						<h2>This vs. Self</h2>
 						<p class="fragment">Confusing?</p>
 						<p class="fragment">Yes.</p>
 					</section>
@@ -744,7 +760,14 @@ boba = 'mango green milk tea'
 						<h1>ES6!</h1>
 					</section>
 					<section>
-						<p>A new standard released in 2015.</p>
+						<h2>ECMAScript 6</h2>
+						<p>A new standard released in 2015 by Ecma International.</p>
+						<p>Prior to that, JavaScript hadn't released a fully new version since 2009.</p>
+					</section>
+					<section>
+						<h2>Ecma International</h2>
+						<p>vs.</p>
+						<h2>Python Foundation</h2>
 					</section>
 				</section>
 
@@ -764,58 +787,168 @@ boba = 'mango green milk tea'
 					<section>
 						<pre><code data-trim data-noescape class="javascript">
 function simpleExample(value) {
-	if (value) {
-		var varValue = value;
-		let letValue = value;
+  if (value) {
+    var varValue = value;
+    let letValue = value;
 
-		console.log(varValue, letValue);
-	}
+    console.log(varValue, letValue);
+  }
 
-	// varValue is available even though it was defined
-	// in if-block because it was "hoisted" to function scope
-	console.log(varValue);
+  // varValue is available even though it was defined
+  // in if-block because it was "hoisted" to function scope
+  console.log(varValue);
 
-	// letValue is a ReferenceError because it
-	// was defined within the if-block
-	console.log(letValue);
+  // letValue is a ReferenceError because it
+  // was defined within the if-block
+  console.log(letValue);
 }
 						</code></pre>
 						<small>Code adapted from <a href="http://www.benmvp.com/">BenMVP</a></small>
+					</section>
+					<section>
+						<table>
+							<tr>
+								<th></th>
+								<th><h6>Python</h6></th>
+								<th><h6>JavaScript</h6></th>
+							</tr>
+							<tr>
+								<td><h6>Scope</h6></td>
+								<td>Lexical</td>
+								<td>Lexical</td>
+							</tr>
+							<tr>
+								<td><h6>Namespace</h6></td>
+								<td>Functions, Classes, Modules</td>
+								<td>Functions<span class="fragment">, Blocks</span></td>
+							</tr>
+							<tr>
+								<td><h6>New Identifiers</h6></td>
+								<td>Variables, Functions, Classes</td>
+								<td>Variables, Functions</td>
+							</tr>
+							<tr>
+								<td><h6>Modules</h6></td>
+								<td>Files</td>
+								<td>None</td>
+							</tr>
+						</table>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Template Literals</h2>
-						<p>New ES6 syntactic sugar classes</p>
-						<p>Python Classes</p>
+						<pre><code data-trim data-noescape class="javascript">
+let exclamation = 'Whoa!',
+    sentence = `They're really similar to Python.`;
+
+console.log(`Template Literals: ${exclamation} ${sentence}`);
+
+// Template Literals: Whoa! They're really similar to Python.
+						</code></pre>
+
+						<pre><code data-trim data-noescape class="python">
+print '.format(): {} {}'.format('Yup.', 'Quite!')
+
+// .format(): Yup. Quite!
+						</code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section data-background-image="img/icecream_pattern.png">
+						<h2>Default Parameters</h2>
+						<pre><code data-trim data-noescape class="javascript">
+function nom(food="ice cream") {
+  console.log(`Time to eat ${food}`);
+}
+
+nom(); // Time to eat ice cream
+						</code></pre>
+
+						<pre><code data-trim data-noescape class="python">
+def nom(food="ice cream"):
+  print 'Time to eat {}'.format(food)
+
+nom() # Time to eat ice cream
+						</code></pre>
+						<small>Pattern via <a href="https://dribbble.com/shots/1294320-Ice-Cream-Pattern">Dorottya Porkolab</a></small>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>Spread Operators... v. Kwargs</h2>
-					</section>
-				</section>
+						<h2>...Rest Parameters vs. *args</h2>
+						<pre><code data-trim data-noescape class="javascript">
 
-				<section>
-					<section>
-						<h2>Rest/Default Parameters v. XXX</h2>
-						<p>Setting default parameters in the function definition.</p>
+						</code></pre>
+
+						<pre><code data-trim data-noescape class="python">
+
+						</code></pre>
 					</section>
 				</section>
 
 				<section>
 					<section>
 						<h2>Classes</h2>
-						<p>New ES6 syntactic sugar classes</p>
-						<p>Python Classes</p>
+						<p>Syntactic sugar</p>
 					</section>
 					<section data-background="img/prototype2.jpg">
-						<aside class="notes">
-							Slide of screenshot from video game Prototype 2.
-						</aside>
+						<aside class="notes">So, we talked about prototypes earlier. I like to call these classes "Prototype 2". The tagline of this game was "Murder your Maker." Slide of screenshot from video game Prototype 2.</aside>
 					</section>
+					<section>
+						<h2>"Classes" vs. Classes</h2>
+						<div style="display:inline-block;width: 49%;">
+							<pre><code data-trim data-noescape class="javascript">
+class Mammal {
+  constructor() {
+    this.neocortex = true;
+  }
+}
+
+class Cat extends Mammal {
+  constructor(name, years) {
+    super();
+    this.name = name;
+    this.years = years;
+  }
+
+  eat(food) {
+    console.log('nom ' + food);
+  }
+}
+
+let fryCat = new Cat('Fry', 7);
+fryCat.eat('steak');
+							</code></pre>
+						</div>
+						<div style="display:inline-block;width: 49%;">
+							<pre><code data-trim data-noescape class="python">
+class Mammal(object):
+  neo_cortex = True
+
+class Cat(Mammal):
+  def __init__(self, name, years):
+    self.name = name
+    self.years = years
+
+  def eat(food):
+    print 'nom %s' % (food)
+
+
+
+fry_cat = Cat('Fry', 7)
+
+fry_cat.eat('steak')
+
+
+							</code></pre>
+						</div>
+					</section>
+					<section data-background-image="img/break_ooo.gif">
+					</section>d
 				</section>
 
 				<section>
@@ -834,9 +967,10 @@ function simpleExample(value) {
 						<aside class="notes">My coworkers who work only in Python were literally shocked when I told them about some of this.</aside>
 					</section>
 					<section data-background="img/confused.gif">
-						<aside class="notes">
-							Slide where Sherlock is simultaneously confused and sad.
-						</aside>
+						<aside class="notes">So instead of being confused and sad all the time when working with Python.. Slide where Sherlock is simultaneously confused and sad.</aside>
+					</section>
+					<section data-background="img/gbbo_celebrate.gif">
+						<aside class="notes">I learned that some rules and constraints could be good! Slide of GBBO hosts celebrating.</aside>
 					</section>
 					<section data-background="img/berry_wink.gif">
 					</section>
