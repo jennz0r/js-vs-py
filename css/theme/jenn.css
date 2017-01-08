@@ -302,3 +302,7 @@ body {
 
 .twitter-tweet {
   margin: 0 auto !important; }
+
+.white-font {
+  color: white !important;
+  text-shadow: 1px 1px 5px #333 !important; }
