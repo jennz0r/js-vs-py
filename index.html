@@ -176,6 +176,7 @@
 					<section>
 						<h2>Python</h2>
 						<p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+						<small>- <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia</a> on Python</small>
 					</section>
 					<section>
 						<img src="img/javascript.png" class="img--no-format">
@@ -183,6 +184,7 @@
 					<section>
 						<h2>JavaScript</h2>
 						<p>JavaScript is a high-level, dynamic, untyped, and interpreted programming language.</p>
+						<small>- <a href="https://en.wikipedia.org/wiki/Javascript">Wikipedia</a> on Python</small>
 					</section>
 					<section>
 						<table>
@@ -306,7 +308,7 @@ Comment
 								<td>None</td>
 							</tr>
 							<tr>
-								<td><h6>Undefined</h6></td>
+								<td><h6>Empty Value</h6></td>
 								<td>Undefined</td>
 								<td></td>
 							</tr>
@@ -316,12 +318,12 @@ Comment
 								<td>int, float, long, complex</td>
 							</tr>
 							<tr>
-								<td><h6>Array</h6></td>
-								<td>Array</td>
+								<td><h6>Sequences</h6></td>
+								<td>Array, <span class="fragment">tuple</span></td>
 								<td>list, tuple, bytearray, buffer, xrange</td>
 							</tr>
 							<tr>
-								<td><h6>Objects</h6></td>
+								<td><h6>Key/Value Store</h6></td>
 								<td>Object</td>
 								<td>Dictionary</td>
 							</tr>
@@ -395,7 +397,7 @@ Comment
 
 					<section>
 						<h2>Tradeoffs</h2>
-						<p>Faster development with more runtime errors versus slower development with less runtime errors.</p>
+						<p>Faster development with more runtime errors versus slower development with fewer runtime errors.</p>
 						<p>Take your pick.</p>
 					</section>
 				</section>
@@ -441,18 +443,19 @@ function drSeuss(catInTheHat, thing1, thing2) {
 							</code></pre>
 						</div>
 						<div style="display:inline-block;width: 49%;" class="python">
-							<pre><code data-trim data-noescape>
-def dr_seuss(cat_in_the_hat, thing1, thing2):
-  if cat_in_the_hat == true and
-    thing2 == true and
-    thing2 == true:
+							<pre><code data-noescape>def dr_seuss(cat_in_the_hat, thing1, thing2):
+  if cat_in_the_hat == True and
+    thing2 == True and
+    thing2 == True:
     print 'is cray'
-  elif cat_in_the_hat != true:
+  elif cat_in_the_hat != True:
     print 'boring'
   else:
     print 'so boring'
+
 							</code></pre>
 						</div>
+						<aside class="notes">I literally just presented this to coworkers and had all instances of True as lowercase haha.</aside>
 					</section>
 
 					<section>
@@ -531,8 +534,9 @@ do_i_like_children = 'yes' if well_behaved else 'no'
 						<h2>Prototypes vs. Classes</h2>
 						<div style="display:inline-block;width: 49%;">
 							<pre><code data-trim data-noescape class="javascript">
-var Mammal = function() {};
-Mammal.prototype.neoCortex = true;
+var Mammal = function() {
+  this.neoCortex = true;
+};
 
 var Cat = function(name, years) {
   this.name = name;
@@ -540,18 +544,16 @@ var Cat = function(name, years) {
 };
 
 Cat.prototype = new Mammal;
-
-var fryCat = new Cat('Fry', 7);
-
-fryCat.prototype.eat = function(food) {
+Cat.prototype.eat = function(food) {
   console.log('nom ' + food);
 }
+
+var fryCat = new Cat('Fry', 7);
 fryCat.eat('steak');
 							</code></pre>
 						</div>
 						<div style="display:inline-block;width: 49%;">
-							<pre><code data-trim data-noescape class="python">
-class Mammal(object):
+							<pre><code data-noescape class="python">class Mammal(object):
   neo_cortex = True
 
 class Cat(Mammal):
@@ -561,8 +563,6 @@ class Cat(Mammal):
 
   def eat(food):
     print 'nom %s' % (food)
-
-
 
 fry_cat = Cat('Fry', 7)
 
@@ -574,39 +574,30 @@ fry_cat.eat('steak')
 					</section>
 					<section>
 						<h2>Prototypes vs. Classes</h2>
-						<div style="display:inline-block;width: 49%;">
 							<pre><code data-trim data-noescape class="javascript">
-var Mammal = function() {};
-Mammal.prototype.neoCortex = true;
+var Mammal = function() {
+  this.neoCortex = true;
+}
 							</code></pre>
-						</div>
-						<div style="display:inline-block;width: 49%;">
 							<pre><code data-trim data-noescape class="python">
 class Mammal(object):
   neo_cortex = True
 							</code></pre>
-						</div>
 					</section>
 					<section>
 						<h2>Prototypes vs. Classes</h2>
-						<div style="display:inline-block;width: 49%;">
-							<pre><code data-trim data-noescape class="javascript">
+						<pre><code data-trim data-noescape class="javascript">
 var Cat = function(name, years) {
   this.name = name;
   this.years = years;
 };
 
 Cat.prototype = new Mammal;
-
-var fryCat = new Cat('Fry', 7);
-
-fryCat.prototype.eat = function(food) {
+Cat.prototype.eat = function(food) {
   console.log('nom ' + food);
 }
-							</code></pre>
-						</div>
-						<div style="display:inline-block;width: 49%;">
-							<pre><code data-trim data-noescape class="python">
+						</code></pre>
+						<pre><code data-trim data-noescape class="python">
 class Cat(Mammal):
   def __init__(self, name, years):
     self.name = name
@@ -615,23 +606,20 @@ class Cat(Mammal):
   def eat(food):
     print 'nom %s' % (food)
 
-
-fry_cat = Cat('Fry', 7)
-							</code></pre>
-						</div>
+						</code></pre>
 					</section>
-										<section>
+					<section>
 						<h2>Prototypes vs. Classes</h2>
-						<div style="display:inline-block;width: 49%;">
-							<pre><code data-trim data-noescape class="javascript">
+						<pre><code data-trim data-noescape class="javascript">
+var fryCat = new Cat('Fry', 7);
+
 fryCat.eat('steak');
-							</code></pre>
-						</div>
-						<div style="display:inline-block;width: 49%;">
-							<pre><code data-trim data-noescape class="python">
+						</code></pre>
+						<pre><code data-trim data-noescape class="python">
+fry_cat = Cat('Fry', 7)
+
 fry_cat.eat('steak')
-							</code></pre>
-						</div>
+						</code></pre>
 					</section>
 					<section data-background-image="img/cat-eats-steak.jpg">
 						<aside class="notes">Image of cat eating a steak.</aside>
@@ -657,7 +645,7 @@ fry_cat.eat('steak')
 							<tr>
 								<td><h6>Namespace</h6></td>
 								<td>Functions, Classes, Modules</td>
-								<td>Functions</td>
+								<td>Functions<span class="fragment">, Classes, Modules</span></td>
 							</tr>
 							<tr>
 								<td><h6>New Identifiers</h6></td>
@@ -678,12 +666,26 @@ fry_cat.eat('steak')
 						<h2>This vs. Self</h2>
 					</section>
 					<section data-background="img/doctor_who_this.gif">
+						<aside class="notes">Gif of Doctor Who saying "This!"</aside>
 					</section>
 					<section>
+						<h2>This vs. Self</h2>
+						<p><em>this</em> is from JavaScript.</p>
+						<p><em>self</em> is from Python.</p>
+					</section>
+					<section>
+						<h2>Are they the same?</h2>
+					</section>
+					<section>
+						<img src="img/free_shrugs.png" alt="man shrugs holding 'free shrugs' sign" style="width:50%;">
+					</section>
+					<section>
+						<h2>This vs. Self</h2>
 						<p><em>this</em> is a special keyword.</p>
 						<p><em>self</em> is not a special keyword.</p>
 					</section>
 					<section>
+						<h2>This vs. Self</h2>
 						<p><em>this</em> can refer to the global object or the containing object depending on the execution context.</p>
 						<p><em>self</em> is just convention, is the explicit first argument of a function, and refers to the instance.</p>
 					</section>
@@ -733,8 +735,8 @@ foo(); // true true true
 				</section>
 
 				<section>
-					<h2>Hoisting</h2>
-					<div style="display:inline-block;width: 49%;">
+					<section>
+						<h2>Hoisting</h2>
 						<pre><code data-trim data-noescape class="javascript">
 var boba = 'passion green tea';
 console.log(boba);
@@ -749,18 +751,19 @@ function jennsOrder() {
 
 jennsOrder();
 						</code></pre>
-					</div>
-					<div style="display:inline-block;width: 49%;">	
+						<small>This prints 'passion green tea', undefined, 'mango green milk tea'.</small>
+					</section>
+					<section>
+						<h2>Hoisting</h2>
 						<pre><code data-trim data-noescape class="python">
 def jenns_order:
-print boba
-boba = 'mango green milk tea'
+	print boba
+	boba = 'mango green milk tea'
 						</code></pre>
-					</div>
-					<br/>
-					<br/>
-					<small>*Boba is also known as bubble tea, pearl milk tea, boba milk tea, and boba juice.</small>
-					<aside class="notes">Only the declaration gets hoisted and this is again due to the fact that variables can be created but unassigned in JavaScript</aside>
+						<small>This is not possible because hoisting doesn't exist in Python.</small>
+						<small>*Boba is also known as bubble tea, pearl milk tea, boba milk tea, and boba juice.</small>
+						<aside class="notes">Only the declaration gets hoisted and this is again due to the fact that variables can be created but unassigned in JavaScript</aside>
+					</section>
 				</section>
 
 				<section>
@@ -776,6 +779,9 @@ boba = 'mango green milk tea'
 						<h2>Ecma International</h2>
 						<p>vs.</p>
 						<h2>Python Foundation</h2>
+					</section>
+					<section data-background="img/otters.gif">
+						<aside class="notes">Python helped me learn ES6! Gif of otters holding paws.</aside>
 					</section>
 				</section>
 
@@ -855,7 +861,9 @@ console.log(`Template Literals: ${exclamation} ${sentence}`);
 
 // Template Literals: Whoa! They're really similar to Python.
 						</code></pre>
-
+					</section>
+					<section>
+						<h2>Template Literals</h2>
 						<pre><code data-trim data-noescape class="python">
 print '.format(): {} {}'.format('Yup.', 'Quite!')
 
@@ -874,7 +882,9 @@ function nom(food="ice cream") {
 
 nom(); // Time to eat ice cream
 						</code></pre>
-
+					</section>
+					<section>
+						<h2>Default Parameters</h2>
 						<pre><code data-trim data-noescape class="python">
 def nom(food="ice cream"):
   print 'Time to eat {}'.format(food)
@@ -900,6 +910,9 @@ let es6Joke = "Why does JS single out one parameter?"
 
 joke(es6Joke, "Because it doesn't", 'really like', 'all the REST of them!');
 						</code></pre>
+					</section>
+					<section>
+						<h2>...Rest Parameters vs. *args</h2>
 						<pre><code data-trim data-noescape class="python">
 def pirate_joke(question, *args):
   print question
