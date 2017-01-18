@@ -89,6 +89,7 @@
 					</section>
 					<section>
 						<h2>Jenn learns JavaScript.</h2>
+						<aside class="notes">It's important here to note that when I say JavaScript, I mean ES5. I will talk a bit about ES6 later though!</aside>
 					</section>
 					<section>
 						<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Good news, me! <a href="https://twitter.com/hashtag/javascript?src=hash">#javascript</a> <a href="https://twitter.com/hashtag/programming?src=hash">#programming</a> <a href="https://twitter.com/hashtag/developer?src=hash">#developer</a> <a href="http://t.co/9Cx01Nyj">http://t.co/9Cx01Nyj</a></p>&mdash; jennz0r (@mybluewristband) <a href="https://twitter.com/mybluewristband/status/298313676530806784">February 4, 2013</a></blockquote>
@@ -426,6 +427,9 @@ concatenated = str(not_coerced) + 'string'
 
 				<section>
 					<section>
+						<h2>Functions</h2>
+					</section>
+					<section>
 						<h2>Functions & Conditionals</h2>
 						<div style="display:inline-block;width: 49%;">
 							<pre><code data-trim data-noescape class="javascript"  class="python">
@@ -662,7 +666,7 @@ fry_cat.eat('steak')
 						</code></pre>
 					</section>
 					<section data-background-image="img/cat-eats-steak.jpg">
-						<aside class="notes">Image of cat eating a steak.</aside>
+						<aside class="notes">One thing to note is that most people don't deal directly with prototype because many JS libraries abstract it for you. Image of cat eating a steak.</aside>
 					</section>
 				</section>
 
@@ -753,15 +757,17 @@ fry_cat.eat('steak')
 						<h2>Window.self</h2>
 						<pre><code data-trim data-noescape class="javascript">
 function foo() {
-    console.log(
-        window.self === window, // is self window?
-        window.self === this,   // is self this?
-        this === window         // is this window?
-    );
+  console.log(
+    window.self === window, // is self window?
+    window.self === this,   // is self this?
+    this === window         // is this window?
+  );
 }
+
 foo(); // true true true
 						</code></pre>
-						<p>So <em>this</em> could be <em>self</em> if you're in the global scope</p>
+						<p>So <em>this</em> could be <em>self</em> if you're in the global scope!</p>
+						<aside class="notes">Window.self - Web DOM API</aside>
 					</section>
 					<section>
 						<h2>This vs. Self</h2>
@@ -825,8 +831,8 @@ def jenns_order:
 					<section>
 						<h2>Ecma International</h2>
 						<p>vs.</p>
-						<h2>Python Foundation</h2>
-						<aside class="notes">For example, my coworker Ashwini is part of the board.</aside>
+						<h2>Python Software Foundation</h2>
+						<aside class="notes">Ecma International is an international private non-profit standards organization. The Python Software Foundation is a nonprofit organization devoted to the Python programming language. Anyone can be a basic member, but you can also move up the membership ranks. For example, my coworker Ashwini is part of the board.</aside>
 					</section>
 					<section data-background="img/otters.gif">
 						<aside class="notes">Python helped me learn ES6! Gif of otters holding paws.</aside>
@@ -896,6 +902,7 @@ function simpleExample(value) {
 				<section>
 					<section>
 						<h2>Template Literals</h2>
+						<p>String literals allowing embedded expressions. They were called "template strings" in prior editions of the ES2015 specification.</p>
 					</section>
 					<section>
 						<h2>Template Literals</h2>
@@ -978,10 +985,11 @@ nom() # Time to eat ice cream
 
 				<section>
 					<section>
-						<h2>...Rest Parameters vs. *args</h2>
+						<h2>...Rest Parameters & *args</h2>
+						<p>The rest parameter syntax allows us to represent an indefinite number of arguments as an array.</p>
 					</section>
 					<section>
-						<h2>...Rest Parameters vs. *args</h2>
+						<h2>...Rest Parameters & *args</h2>
 						<pre><code data-trim data-noescape class="javascript">
 function joke(question, ...phrases) {
   console.log(question);
@@ -1000,7 +1008,7 @@ joke(es6Joke, "Because it doesn't", 'really like', 'all the REST of them!');
 						</code></pre>
 					</section>
 					<section>
-						<h2>...Rest Parameters vs. *args</h2>
+						<h2>...Rest Parameters & *args</h2>
 						<pre><code data-trim data-noescape class="python">
 def pirate_joke(question, *args):
   print question
