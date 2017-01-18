@@ -50,6 +50,9 @@
 				</section>
 
 				<section>
+					<section data-background="img/civil_engineer.jpg">
+						<aside class="notes">Image of lady civil engineers on construction site.</aside>
+					</section>
 					<section>
 						<h2>Way Back</h2>
 						<ul>
@@ -57,9 +60,6 @@
 							<li>MATLAB</li>
 							<li>Embedded C</li>
 						</ul>
-					</section>
-					<section data-background="img/civil_engineer.jpg">
-						<aside class="notes">Image of lady civil engineers on construction site.</aside>
 					</section>
 					<section>
 						<h2>2010 - 2012</h2>
@@ -175,7 +175,7 @@
 					</section>
 					<section>
 						<h2>Python</h2>
-						<p>Python is a widely used high-level, general-purpose, interpreted, dynamic programming language. Its design philosophy emphasizes code readability, and its syntax allows programmers to express concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
+						<p>Python is a high-level, dynamic, interpreted, programming language. It emphasizes code readability, and its syntax expresses concepts in fewer lines of code than possible in languages such as C++ or Java.</p>
 						<small>- <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia</a> on Python</small>
 					</section>
 					<section>
@@ -183,8 +183,8 @@
 					</section>
 					<section>
 						<h2>JavaScript</h2>
-						<p>JavaScript is a high-level, dynamic, untyped, and interpreted programming language.</p>
-						<small>- <a href="https://en.wikipedia.org/wiki/Javascript">Wikipedia</a> on Python</small>
+						<p>JavaScript is a high-level, dynamic, interpreted, and untyped, programming language.</p>
+						<small>- <a href="https://en.wikipedia.org/wiki/Javascript">Wikipedia</a> on JavaScript</small>
 					</section>
 					<section>
 						<table>
@@ -468,25 +468,61 @@ function drSeuss(catInTheHat, thing1, thing2) {
 					</section>
 
 					<section>
-						<h2>Functions & Methods in JavaScript</h2>
+						<h2>Functions & Methods (JavaScript)</h2>
 						<p>The global Function object has no methods or properties of its own. However, it does inherit some methods and properties through the prototype chain from Function.prototype.</p>
+						<small>- <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">MDN</a> on functions</small>
 					</section>
 
 					<section>
-						<h2>Declared <span class="fragment">Functions</span></h2>
+						<h2>Methods in JavaScript</h2>
+						<ul>
+							<li>Function.prototype.apply()</li>
+							<li>Function.prototype.bind()</li>
+							<li>Function.prototype.call()</li>
+							<li>Function.prototype.isGenerator()</li>
+							<li>Function.prototype.toSource()</li>
+							<li>Function.prototype.toString()</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Declared or "Created" Functions</h2>
 						<p>vs.</p>
-						<h2>Built In <span class="fragment">Methods</span></h2>
+						<h2>Inherited or "Built In" Methods</h2>
 					</section>
 
 					<section>
 						<h2>Functions & Methods</h2>
 						<p>In most respects functions and methods are identical except for two key differences:</p>
-
 						<ol>
 							<li>A method is implicitly passed the object on which it was called.</li>
 							<li>A method is able to operate on data that is contained within the  <span class="fragment highlight-blue">class</span>.</li>
 						</ol>
 					</section>
+
+					<section>
+						<h2>Functions & Methods (Python)</h2>
+						<pre><code data-trim data-noescape class="python"!>
+def fish_and_chips():
+  ingredients = ['fish', 'potatoes', 'batter']
+  print 'cooking %s together' % (', '.join(ingredients))
+
+# cooking fish, potatoes, batter
+
+class Baking(object):
+  def __init__(self, supplies):
+    self.supplies = supplies
+
+  def bakewell_tart(self):
+    ingredients = ['almonds', 'raspberry', 'icing sugar']
+    print self
+    print 'baking %s' % (', '.join(ingredients))
+
+# <__main__.Baking object at 0x10d6e0510>
+# baking almonds, raspberry, icing sugar
+						</code></pre>
+					</section>
+
 					<section data-background-image="img/doctor_who.gif">
 						<aside class="notes">Gif of Doctor Who (13th) doing a face palm.</aside>
 					</section>
@@ -515,7 +551,7 @@ do_i_like_children = 'yes' if well_behaved else 'no'
 						<h2>Prototypes</h2>
 					</section>
 					<section data-background="img/prototype-jewelry.jpg">
-						<aside class="notes">Slide showing prototypes of a ring.</aside>
+						<aside class="notes">An early sample of a product to test a concept prior to production. Slide showing prototypes of a ring.</aside>
 					</section>
 					<section data-background="img/prototype.jpg">
 						<aside class="notes">Slide showing a screenshot of the video game Prototype.</aside>
@@ -526,9 +562,14 @@ do_i_like_children = 'yes' if well_behaved else 'no'
 					<section>
 						<h1>Inheritance and the Prototype Chain</h1>
 						<p>When it comes to inheritance, JavaScript only has one construct: objects. Each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. null, by definition, has no prototype, and acts as the final link in this prototype chain.</p>
+						<small>- <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">MDN</a> on Inheritance and the Prototype Chain</small>
 					</section>
 					<section>
 						<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Is there a band called &quot;Inheritance and the Prototype Chain&quot; yet?</p>&mdash; jennz0r (@mybluewristband) <a href="https://twitter.com/mybluewristband/status/816105329159045120">January 3, 2017</a></blockquote>
+					</section>
+					<section>
+						<img src="img/prototype_chain.png" alt="Image of a JavaScript prototype chain">
+						<p><small>from <a href="http://beej.us/blog/data/javascript-prototypes-inheritance/">Beej's Bit Bucket</a></small></p>
 					</section>
 					<section>
 						<h2>Prototypes vs. Classes</h2>
@@ -560,8 +601,7 @@ class Cat(Mammal):
   def __init__(self, name, years):
     self.name = name
     self.years = years
-
-  def eat(food):
+  def eat(self, food):
     print 'nom %s' % (food)
 
 fry_cat = Cat('Fry', 7)
@@ -603,7 +643,7 @@ class Cat(Mammal):
     self.name = name
     self.years = years
 
-  def eat(food):
+  def eat(self, food):
     print 'nom %s' % (food)
 
 						</code></pre>
@@ -629,6 +669,7 @@ fry_cat.eat('steak')
 				<section>
 					<section>
 						<h2>Scope</h2>
+						<aside class="notes">Note here that you thought scope would be confusing, but it was actually very straightforward!.</aside>
 					</section>
 					<section>
 						<table>
@@ -651,11 +692,6 @@ fry_cat.eat('steak')
 								<td><h6>New Identifiers</h6></td>
 								<td>Variables, Functions, Classes</td>
 								<td>Variables, Functions</td>
-							</tr>
-							<tr>
-								<td><h6>Modules</h6></td>
-								<td>Files</td>
-								<td>None</td>
 							</tr>
 						</table>
 					</section>
@@ -737,6 +773,9 @@ foo(); // true true true
 				<section>
 					<section>
 						<h2>Hoisting</h2>
+					</section>
+					<section>
+						<h2>Hoisting</h2>
 						<pre><code data-trim data-noescape class="javascript">
 var boba = 'passion green tea';
 console.log(boba);
@@ -750,17 +789,23 @@ function jennsOrder() {
 }
 
 jennsOrder();
+
+// 'passion green tea'
+//  undefined
+// 'mango green milk tea'
 						</code></pre>
-						<small>This prints 'passion green tea', undefined, 'mango green milk tea'.</small>
 					</section>
 					<section>
 						<h2>Hoisting</h2>
 						<pre><code data-trim data-noescape class="python">
 def jenns_order:
-	print boba
-	boba = 'mango green milk tea'
+  print boba
+  boba = 'mango green milk tea'
+
+# This is not possible because Python does not allow
+# variables to be unassigned and hoisting does not exist
+# in Python.
 						</code></pre>
-						<small>This is not possible because hoisting doesn't exist in Python.</small>
 						<small>*Boba is also known as bubble tea, pearl milk tea, boba milk tea, and boba juice.</small>
 						<aside class="notes">Only the declaration gets hoisted and this is again due to the fact that variables can be created but unassigned in JavaScript</aside>
 					</section>
@@ -775,10 +820,13 @@ def jenns_order:
 						<p>A new standard released in 2015 by Ecma International.</p>
 						<p>Prior to that, JavaScript hadn't released a fully new version since 2009.</p>
 					</section>
+					<section data-background="img/cybermen.jpg">
+					</section>
 					<section>
 						<h2>Ecma International</h2>
 						<p>vs.</p>
 						<h2>Python Foundation</h2>
+						<aside class="notes">For example, my coworker Ashwini is part of the board.</aside>
 					</section>
 					<section data-background="img/otters.gif">
 						<aside class="notes">Python helped me learn ES6! Gif of otters holding paws.</aside>
@@ -788,7 +836,7 @@ def jenns_order:
 				<section>
 					<section>
 						<h2>Block Scope</h2>
-						<p>Moar confusion</p>
+						<p class="fragment">Moar confusion</p>
 						<aside class="notes">Remember how I was saying that only functions create scope in JavaScript? Well, that's not true anymore.</aside>
 					</section>
 					<section data-background="img/what_do_you_mean.gif">
@@ -805,16 +853,16 @@ function simpleExample(value) {
     var varValue = value;
     let letValue = value;
 
-    console.log(varValue, letValue);
+    console.log(varValue, letValue); // value value
   }
 
   // varValue is available even though it was defined
   // in if-block because it was "hoisted" to function scope
-  console.log(varValue);
+  console.log(varValue); // value
 
   // letValue is a ReferenceError because it
   // was defined within the if-block
-  console.log(letValue);
+  console.log(letValue); // Uncaught ReferenceError: letValue is not defined
 }
 						</code></pre>
 						<small>Code adapted from <a href="http://www.benmvp.com/">BenMVP</a></small>
@@ -834,23 +882,21 @@ function simpleExample(value) {
 							<tr>
 								<td><h6>Namespace</h6></td>
 								<td>Functions, Classes, Modules</td>
-								<td>Functions<span class="fragment">, Blocks</span></td>
+								<td>Functions<span class="fragment">, Classes, Modules, Blocks</span></td>
 							</tr>
 							<tr>
 								<td><h6>New Identifiers</h6></td>
 								<td>Variables, Functions, Classes</td>
 								<td>Variables, Functions</td>
 							</tr>
-							<tr>
-								<td><h6>Modules</h6></td>
-								<td>Files</td>
-								<td>None</td>
-							</tr>
 						</table>
 					</section>
 				</section>
 
 				<section>
+					<section>
+						<h2>Template Literals</h2>
+					</section>
 					<section>
 						<h2>Template Literals</h2>
 						<pre><code data-trim data-noescape class="javascript">
@@ -867,12 +913,31 @@ console.log(`Template Literals: ${exclamation} ${sentence}`);
 						<pre><code data-trim data-noescape class="python">
 print '.format(): {} {}'.format('Yup.', 'Quite!')
 
-// .format(): Yup. Quite!
+# .format(): Yup. Quite!
+						</code></pre>
+					</section>
+					<section>
+						<h2>Template Literals</h2>
+						<pre><code data-trim data-noescape class="javascript">
+let exclamation = 'Whoa!',
+    sentence = `They're really similar to Python.`;
+
+console.log(`Template Literals: ${exclamation} ${sentence}`);
+
+// Template Literals: Whoa! They're really similar to Python.
+						</code></pre>
+						<pre><code data-trim data-noescape class="python">
+print '.format(): {} {}'.format('Yup.', 'Quite!')
+
+# .format(): Yup. Quite!
 						</code></pre>
 					</section>
 				</section>
 
 				<section>
+					<section>
+						<h2>Default Parameters</h2>
+					</section>
 					<section data-background-image="img/icecream_pattern.png">
 						<h2>Default Parameters</h2>
 						<pre><code data-trim data-noescape class="javascript">
@@ -882,8 +947,9 @@ function nom(food="ice cream") {
 
 nom(); // Time to eat ice cream
 						</code></pre>
+						<small>Pattern via <a href="https://dribbble.com/shots/1294320-Ice-Cream-Pattern">Dorottya Porkolab</a></small>
 					</section>
-					<section>
+					<section data-background-image="img/icecream_pattern.png">
 						<h2>Default Parameters</h2>
 						<pre><code data-trim data-noescape class="python">
 def nom(food="ice cream"):
@@ -891,11 +957,29 @@ def nom(food="ice cream"):
 
 nom() # Time to eat ice cream
 						</code></pre>
-						<small>Pattern via <a href="https://dribbble.com/shots/1294320-Ice-Cream-Pattern">Dorottya Porkolab</a></small>
+					</section>
+					<section data-background-image="img/icecream_pattern.png">
+						<h2>Default Parameters</h2>
+						<pre><code data-trim data-noescape class="javascript">
+function nom(food="ice cream") {
+  console.log(`Time to eat ${food}`);
+}
+
+nom(); // Time to eat ice cream
+						</code></pre>
+						<pre><code data-trim data-noescape class="python">
+def nom(food="ice cream"):
+  print 'Time to eat {}'.format(food)
+
+nom() # Time to eat ice cream
+						</code></pre>
 					</section>
 				</section>
 
 				<section>
+					<section>
+						<h2>...Rest Parameters vs. *args</h2>
+					</section>
 					<section>
 						<h2>...Rest Parameters vs. *args</h2>
 						<pre><code data-trim data-noescape class="javascript">
@@ -907,8 +991,12 @@ function joke(question, ...phrases) {
 }
 
 let es6Joke = "Why does JS single out one parameter?"
-
 joke(es6Joke, "Because it doesn't", 'really like', 'all the REST of them!');
+
+// Why does JS single out one parameter?
+// Because it doesn't
+// really like
+// all the REST of them!
 						</code></pre>
 					</section>
 					<section>
@@ -922,6 +1010,11 @@ def pirate_joke(question, *args):
 python_joke = "What's a Pyrate's favorite parameter?"
 
 pirate_joke(python_joke, "*args!", "*arrgs!", "*arrrgs!")
+
+# What's a Pyrate's favorite parameter?
+# *args!
+# *arrgs!
+# *arrrgs!
 						</code></pre>
 					</section>
 				</section>
@@ -961,9 +1054,11 @@ fryCat.eat('steak');
 							</code></pre>
 						</div>
 						<div style="display:inline-block;width: 49%;">
-							<pre><code data-trim data-noescape class="python">
-class Mammal(object):
+							<pre><code data-noescape class="python">class Mammal(object):
   neo_cortex = True
+
+
+
 
 class Cat(Mammal):
   def __init__(self, name, years):
@@ -975,12 +1070,9 @@ class Cat(Mammal):
 
 
 
+
 fry_cat = Cat('Fry', 7)
-
-fry_cat.eat('steak')
-
-
-							</code></pre>
+fry_cat.eat('steak')</code></pre>
 						</div>
 					</section>
 					<section data-background-image="img/break_ooo.gif">
@@ -1009,12 +1101,17 @@ fry_cat.eat('steak')
 						<aside class="notes">My coworkers who work only in Python were literally shocked when I told them about some of this.</aside>
 					</section>
 					<section data-background="img/gbbo_celebrate.gif">
-						<aside class="notes">I learned that some rules and constraints could be good! Slide of GBBO hosts celebrating.</aside>
+						<aside class="notes">I learned that some rules and constraints could be good! And that learning from each other and from other languages really helps you expand your original knowledge. Slide of GBBO hosts celebrating.</aside>
 					</section>
 					<section data-background="img/berry_wink.gif">
+						<aside class="notes">Thanks to Alice, Emma, Ashwini, and Ben for being part of my examples. And thanks to Marcos, Gago, and Mica for all their feedback. Slide of Mary Berry winking.</aside>
+					</section>
+					<section>
+						<h1>Thank you!</h1>
+						<br/>
+						<small><a href="https://github.com/jennz0r" target="_blank">jennz0r</a> / <a href="https://twitter.com/mybluewristband" target="_blank">@mybluewristband</a></small>
 					</section>
 				</section>
-
 			</div>
 		</div>
 
